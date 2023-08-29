@@ -33,11 +33,11 @@ function AddressInput() {
     }
   };
 
-  const handleAddressChange = (e) => {
-    const inputAddress = e.target.value;
-    setAddress(inputAddress);
-    setIsButtonDisabled(inputAddress.length !== 42);
-  };
+  // const handleAddressChange = (e) => {
+  //   const inputAddress = e.target.value;
+  //   setAddress(inputAddress);
+  //   setIsButtonDisabled(inputAddress.length !== 42);
+  // };
 
   return (
     <div className="Check-Balance">
@@ -47,7 +47,7 @@ function AddressInput() {
         placeholder="Enter Ethereum Address"
         className="Address-Input"
         value={address}
-        onChange={handleAddressChange}
+        // onChange={handleAddressChange}
       />
       <button className="Check-Balance-Button" onClick={getDetails} disabled={isButtonDisabled}>
         Get Address Details
