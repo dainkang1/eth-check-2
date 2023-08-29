@@ -1,0 +1,13 @@
+.Balance-Display {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .Balance-Text {
+    color: #2ecc71;
+  }
+  
+  .Balance-Text-Unavailable {
+    color: #e74c3c;
+  }
+  

@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import '../components/AddressInput.css';
 import { useAddressContext } from '../context/AddressContext';
-// import BalanceDisplay from './BalanceDisplay';
+import BalanceDisplay from './BalanceDisplay';
 // import TransactionDisplay from './TransactionDisplay';
-// import Web3 from 'web3';
+import Web3 from 'web3';
 
 function AddressInput() {
   const { address, setAddress } = useAddressContext();
-//   const [balance, setBalance ] = useState(null);
+  const [balance, setBalance ] = useState(null);
 //   const [transaction, setTransactions] = useState([]);
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true); 
 
-//   const provider = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/7b1123d293c14ec9aa8d83c2cde53c53"));
+  const provider = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/7b1123d293c14ec9aa8d83c2cde53c53"));
 
   const getDetails = async () => {
     try {
@@ -22,11 +22,11 @@ function AddressInput() {
     //   const lastTransaction = block.transactions[block.transactions.length - 1];
     //   const transaction = await provider.eth.getTransaction(lastTransaction);
 
-    //   const balanceWei = await provider.eth.getBalance(address);
-    //   const balanceEth = provider.utils.fromWei(balanceWei, 'ether');
+      const balanceWei = await provider.eth.getBalance(address);
+      const balanceEth = provider.utils.fromWei(balanceWei, 'ether');
 
     //   setTransactions(transaction);
-    //   setBalance(balanceEth);
+      setBalance(balanceEth);
     } catch (error) {
       alert(error)
       console.error(error);
@@ -52,7 +52,7 @@ function AddressInput() {
       <button className="Check-Balance-Button" onClick={getDetails} disabled={isButtonDisabled}>
         Get Address Details
       </button>
-      {/* <BalanceDisplay balance={balance}/> */}
+      <BalanceDisplay balance={balance}/>
       {/* <TransactionDisplay transaction={transaction}/> */}
     </div>
   );
