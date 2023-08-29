@@ -2,7 +2,10 @@ import React from 'react';
 import '../components/TransactionDisplay.css';
 
 function TransactionDisplay({ transaction }) {
-
+  console.log(transaction, 'transaction')
+  if (!transaction || Object.keys(transaction).length === 0) {
+    return <div className="Transaction-Display">No transactions</div>;
+  }
   return (
     <div className="Transaction-Display">
         <div>
