@@ -8,7 +8,7 @@ import Web3 from 'web3';
 function AddressInput() {
   const { address, setAddress } = useAddressContext();
   const [balance, setBalance ] = useState(null);
-//   const [transaction, setTransactions] = useState([]);
+  const [transaction, setTransactions] = useState([]);
 
   // const [isButtonDisabled, setIsButtonDisabled] = useState(true); 
 
