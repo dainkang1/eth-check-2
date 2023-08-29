@@ -3,16 +3,16 @@ import '../components/AddressInput.css';
 import { useAddressContext } from '../context/AddressContext';
 import BalanceDisplay from './BalanceDisplay';
 // import TransactionDisplay from './TransactionDisplay';
-import Web3 from 'web3';
+// import Web3 from 'web3';
 
 function AddressInput() {
   const { address, setAddress } = useAddressContext();
   const [balance, setBalance ] = useState(null);
 //   const [transaction, setTransactions] = useState([]);
 
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true); 
+  // const [isButtonDisabled, setIsButtonDisabled] = useState(true); 
 
-  const provider = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/7b1123d293c14ec9aa8d83c2cde53c53"));
+  // const provider = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/7b1123d293c14ec9aa8d83c2cde53c53"));
 
   const getDetails = async () => {
     try {
@@ -49,9 +49,9 @@ function AddressInput() {
         value={address}
         // onChange={handleAddressChange}
       />
-      <button className="Check-Balance-Button" onClick={getDetails} disabled={isButtonDisabled}>
+      {/* <button className="Check-Balance-Button" onClick={getDetails} disabled={isButtonDisabled}>
         Get Address Details
-      </button>
+      </button> */}
       <BalanceDisplay balance={balance}/>
       {/* <TransactionDisplay transaction={transaction}/> */}
     </div>
