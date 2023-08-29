@@ -28,7 +28,7 @@ function AddressInput() {
       // const balanceEth = provider.utils.fromWei(balanceWei, 'ether');
 
     //   setTransactions(transaction);
-      setBalance(balanceEth);
+      setBalance(10);
     } catch (error) {
       alert(error)
       console.error(error);
