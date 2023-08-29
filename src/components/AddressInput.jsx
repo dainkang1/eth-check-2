@@ -3,7 +3,7 @@ import '../components/AddressInput.css';
 import { useAddressContext } from '../context/AddressContext';
 import BalanceDisplay from './BalanceDisplay';
 // import TransactionDisplay from './TransactionDisplay';
-import Web3 from 'web3';
+// import Web3 from 'web3';
 
 function AddressInput() {
   const { address, setAddress } = useAddressContext();
