@@ -16,11 +16,11 @@ function AddressInput() {
 
   const getDetails = async () => {
     try {
-      const lastBlockNumber = await provider.eth.getBlockNumber();
-      let block = await provider.eth.getBlock(lastBlockNumber);
+      // const lastBlockNumber = await provider.eth.getBlockNumber();
+      // let block = await provider.eth.getBlock(lastBlockNumber);
 
-      const lastTransaction = block.transactions[block.transactions.length - 1];
-      const transaction = await provider.eth.getTransaction(lastTransaction);
+      // const lastTransaction = block.transactions[block.transactions.length - 1];
+      // const transaction = await provider.eth.getTransaction(lastTransaction);
 
       // const balanceWei = await provider.eth.getBalance(address);
 
