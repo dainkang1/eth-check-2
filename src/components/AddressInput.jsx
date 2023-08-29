@@ -12,7 +12,7 @@ function AddressInput() {
 
   // const [isButtonDisabled, setIsButtonDisabled] = useState(true); 
 
-  // const provider = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/7b1123d293c14ec9aa8d83c2cde53c53"));
+  const provider = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/7b1123d293c14ec9aa8d83c2cde53c53"));
 
   const getDetails = async () => {
     try {
@@ -22,11 +22,11 @@ function AddressInput() {
     //   const lastTransaction = block.transactions[block.transactions.length - 1];
     //   const transaction = await provider.eth.getTransaction(lastTransaction);
 
-      // const balanceWei = await provider.eth.getBalance(address);
-      // const balanceEth = provider.utils.fromWei(balanceWei, 'ether');
+      const balanceWei = await provider.eth.getBalance(address);
+      const balanceEth = provider.utils.fromWei(balanceWei, 'ether');
 
     //   setTransactions(transaction);
-      setBalance(10);
+      setBalance(balanceEth);
     } catch (error) {
       alert(error)
       console.error(error);
