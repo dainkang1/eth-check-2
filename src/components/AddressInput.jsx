@@ -22,11 +22,11 @@ function AddressInput() {
     //   const lastTransaction = block.transactions[block.transactions.length - 1];
     //   const transaction = await provider.eth.getTransaction(lastTransaction);
 
-      const balanceWei = await provider.eth.getBalance(address);
-      const balanceEth = provider.utils.fromWei(balanceWei, 'ether');
+      // const balanceWei = await provider.eth.getBalance(address);
+      // const balanceEth = provider.utils.fromWei(balanceWei, 'ether');
 
     //   setTransactions(transaction);
-      setBalance(balanceEth);
+      setBalance(10);
     } catch (error) {
       alert(error)
       console.error(error);
