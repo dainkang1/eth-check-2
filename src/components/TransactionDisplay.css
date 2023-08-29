@@ -1,0 +1,23 @@
+.Transaction-Display {
+  
+  .Transaction-Table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .Transaction-Row {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .Transaction-Key {
+    font-weight: bold;
+  }
+  
+  .Transaction-Value {
+    text-align: right;
+  }
+}
