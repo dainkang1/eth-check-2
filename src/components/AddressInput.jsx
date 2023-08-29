@@ -3,7 +3,7 @@ import '../components/AddressInput.css';
 import { useAddressContext } from '../context/AddressContext';
 import BalanceDisplay from './BalanceDisplay';
 // import TransactionDisplay from './TransactionDisplay';
-import Web3 from 'web3';
+// import Web3 from 'web3';
 
 function AddressInput() {
   const { address, setAddress } = useAddressContext();
@@ -12,7 +12,7 @@ function AddressInput() {
 
   // const [isButtonDisabled, setIsButtonDisabled] = useState(true); 
 
-  const provider = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/7b1123d293c14ec9aa8d83c2cde53c53"));
+  // const provider = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/7b1123d293c14ec9aa8d83c2cde53c53"));
 
   const getDetails = async () => {
     try {
